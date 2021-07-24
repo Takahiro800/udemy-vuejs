@@ -6,7 +6,15 @@
     <LikeNumber :number="number" v-on:my-click="$event"></LikeNumber>
     <button @click="currentComponent = 'Home'">Home</button>
     <button @click="currentComponent = 'About'">About</button>
-    <component :is="currentComponent"></component>
+    <keep-alive>
+      <component :is="currentComponent"></component>
+    </keep-alive>
+    <div>
+      <h2>イベントのフォーム</h2>
+      <label for="title">タイトル</label>
+      <input id="title" type="text" v-model="eventData.title" />
+      <p>{{ eventData.title }}</p>
+    </div>
   </div>
 </template>
 
@@ -20,6 +28,9 @@ export default {
     return {
       number: 100,
       currentComponent: "Home",
+      eventData: {
+        title: "たいとる",
+      },
     };
   },
   components: {
@@ -29,9 +40,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-div {
-  border: 1px solid blue;
-}
-</style>
