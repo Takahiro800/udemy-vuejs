@@ -1,5 +1,8 @@
 <template>
-	<p>いいね{{number}}</p>
+	<div>
+		<p>いいね{{(number)}}</p>
+		<button @click="increment">+1</button>
+	</div>
 </template>
 
 
@@ -10,6 +13,18 @@ export default {
 		return {
 			number: 5
 		};
-	}
+	},
+	methods: {
+		increment() {
+			this.number += 1
+		}
+	},
 };
 </script>
+
+<style scoped>
+	div {
+		border: 1px solid red
+	}
+
+</style>
