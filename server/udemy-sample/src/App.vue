@@ -1,4 +1,5 @@
 <template>
+	<LikeNumber></LikeNumber>
 </template>
 
 <script>
