@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot name="title"></slot>
+    <slot name="title" :user="user"></slot>
     <slot></slot>
     <hr />
     <p>いいねの数</p>
@@ -10,10 +10,13 @@
 
 <script>
 export default {
-  props: {
-    headerText: {
-      type: String,
-    },
+  data() {
+    return {
+      user: {
+        firstName: "Jack",
+        lastName: "Donald",
+      },
+    };
   },
 };
 </script>
