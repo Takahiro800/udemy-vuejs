@@ -71,6 +71,20 @@
 - componentタグを`keep-alive`タグで囲んであげることでdestroyedを防ぐことができる
 - ライフサイクルは`acrivated`,`deactivated`が使われる
 
+# v-model
+- フォームを構築する際に利用する機能
+- `v-on`と`v-bind`をまとめて一行で書くためのシンタックスシュガー
+- 以下のようにフォームを作成すると、リアルタイムに入力値を反映させる
+```javascript
+      <label for="title">タイトル</label>
+      <input id="title" type="text" v-model="eventData.title" />
+      <p>{{ eventData.title }}</p>
+```
+- フォーカスを外した際に反映したい場合は`v-model.lazy`とすれば良い
+- DOM操作に`input`,`change`がある
+## 修飾子`.number`
+- inputタグで`type="number"`とすることで,数値のみの入力に制限することはできるが、値としてはstringで処理されてしまう。それを防ぐために`v-model.number`としてあげる
+
 
 
 

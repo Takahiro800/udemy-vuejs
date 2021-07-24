@@ -14,6 +14,16 @@
       <label for="title">タイトル</label>
       <input id="title" type="text" v-model="eventData.title" />
       <p>{{ eventData.title }}</p>
+      <hr />
+
+      <label for="maxNumber">最大人数</label>
+      <input id="maxNumber" type="number" v-model.number="eventData.number" />
+      <p>{{ eventData.number }}</p>
+      <hr />
+
+      <label for="detail">イベントの内容</label>
+      <textarea id="detail" cols="30" rows="10" v-model="eventData.detail"></textarea>
+      <p style="white-space: pre">{{ eventData.detail }}</p>
     </div>
   </div>
 </template>
@@ -30,6 +40,8 @@ export default {
       currentComponent: "Home",
       eventData: {
         title: "たいとる",
+        number: 0,
+        detail: "",
       },
     };
   },
