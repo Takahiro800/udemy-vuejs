@@ -6,6 +6,7 @@
 
 # 初めてのvue開発
 - `yarn run dev`
+- `yarn run serve`
 
 ## componentの場合はdataも関数にして渡す
 - 理由はオブジェクトを渡すと、使いまわしているコンポーネント内で同じメモリを共有して参照してしまい、同じデータを表示してしまう
@@ -60,7 +61,15 @@
 
 ## v-bind
 - 省略形は `:`で開始する
+- `v-slot` は`#`で省略することができる
 
+## component タグを利用してコンポーネントを動的に切り替える
+```javascript
+    <component :is="currentComponent"></component>
+```
+- 切り替える度にコンポネントはdestroyされる
+- componentタグを`keep-alive`タグで囲んであげることでdestroyedを防ぐことができる
+- ライフサイクルは`acrivated`,`deactivated`が使われる
 
 
 
