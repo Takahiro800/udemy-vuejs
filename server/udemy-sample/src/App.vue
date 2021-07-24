@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import LikeHeader from './LikeHeader.vue'
+import LikeHeader from './componentes/LikeHeader.vue'
 
 export default {
 	components: {
