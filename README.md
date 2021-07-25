@@ -160,7 +160,24 @@ Vue.directive("border", function(el, binding){
 - 例）`v-border:solid.round`の`round`の部分
 - 修飾子は何個もつなげることができる　
 
+## ローカルに定義することもできる
+- カスタムディレクティブでは`this`を使うことはできない
 
+# フィルターについて
+- computedを使ってもできるが、引数を渡すことができない。
+- 引数を渡せるようにしたものが「filter」
+## 定義
+``` javascript
+Vue.filter("upperCase", function(value) {
+  return value.toUpperCase();
+});
+```
+- 引数の`value`は必ず渡す
+## 使い方
+```javascript
+    <h2>{{ title | upperCase }}</h2>
+```
+- パイプ記号使う
 
 
 
