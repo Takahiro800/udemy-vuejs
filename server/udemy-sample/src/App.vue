@@ -24,6 +24,27 @@
       <label for="detail">イベントの内容</label>
       <textarea id="detail" cols="30" rows="10" v-model="eventData.detail"></textarea>
       <p style="white-space: pre">{{ eventData.detail }}</p>
+      <hr />
+
+      <input type="checkbox" id="isPrivate" v-model="eventData.isPrivate" />
+      <label for="isPrivate">非公開</label>
+      <p>{{ eventData.isPrivate }}</p>
+      <hr />
+
+      <input type="checkbox" id="10" value="10代" v-model="eventData.target" />
+      <label for="10">10代</label>
+      <input type="checkbox" id="20" value="20代" v-model="eventData.target" />
+      <label for="20">20代</label>
+      <input type="checkbox" id="30" value="30代" v-model="eventData.target" />
+      <label for="30">30代</label>
+      <p>{{ eventData.target }}</p>
+      <hr />
+
+      <p>参加費</p>
+      <input type="radio" id="free" value="無料" v-model="eventData.price" />
+      <label for="free">無料</label>
+      <input type="radio" id="paid" value="有料" v-model="eventData.price" />
+      <label for="paid">有料</label>
     </div>
   </div>
 </template>
@@ -42,6 +63,9 @@ export default {
         title: "たいとる",
         number: 0,
         detail: "",
+        isPrivate: false,
+        target: [],
+        price: "無料",
       },
     };
   },

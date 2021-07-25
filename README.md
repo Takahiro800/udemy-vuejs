@@ -85,6 +85,20 @@
 ## 修飾子`.number`
 - inputタグで`type="number"`とすることで,数値のみの入力に制限することはできるが、値としてはstringで処理されてしまう。それを防ぐために`v-model.number`としてあげる
 
+## trim
+- 入力値の先頭と末尾の空白をのぞいてくれる
+- <p>タグでは、表現されないが`<pre>タグ`を使うことで、実際の空白も表現してくれる
+
+## v-model
+- v-modelの初期値を`data`で設定する
+- あとは`type`によってv-modelがよしなにやってくれる
+``` javascript
+      <p>参加費</p>
+      <input type="radio" id="free" value="無料" v-model="eventData.price" />
+      <label for="free">無料</label>
+      <input type="radio" id="paid" value="有料" v-model="eventData.price" />
+      <label for="paid">有料</label>
+```
 
 
 
