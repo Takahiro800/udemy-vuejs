@@ -178,6 +178,15 @@ Vue.filter("upperCase", function(value) {
     <h2>{{ title | upperCase }}</h2>
 ```
 - パイプ記号使う
+- ローカルに定義することもできる
+- | をつなげることでfilterを連結させることができる
+- `this`は使えないので、使いたい場合は`computed`の利用を検討する
+
+## computedとfilterの違いについて
+- リアクティブな依存関係
+- computedは必要なときだけ反映される、不要なときは再読み込みしない
+- 再描画が頻繁にされる箇所ではcomputedを使う方が良い
+- filterは毎回再描画される
 
 
 
