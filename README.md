@@ -156,6 +156,9 @@ Vue.directive("border", function(el, binding){
 - 渡したいデータ・オブジェクトのことを指す
 - 複数渡した場合はオブジェクトで渡す
 
+## 修飾子について
+- 例）`v-border:solid.round`の`round`の部分
+- 修飾子は何個もつなげることができる　
 
 
 
