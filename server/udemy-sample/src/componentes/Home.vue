@@ -2,6 +2,7 @@
   <div>
     <p v-border:solid.round.shadow="{ width: '5px', color: 'red' }">Home</p>
     <h2>{{ title | upperCase }}</h2>
+    <h2>{{ title | lowerCase }}</h2>
   </div>
 </template>
 
@@ -16,6 +17,11 @@ export default {
   computed: {
     upperCaseTitle() {
       return this.title.toUpperCase();
+    },
+  },
+  filters: {
+    lowerCase(value) {
+      return value.toLowerCase();
     },
   },
   directives: {
