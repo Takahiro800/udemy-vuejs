@@ -100,6 +100,14 @@
       <label for="paid">有料</label>
 ```
 
+### select-box
+```javascript
+      <select v-model="eventData.location">
+        <option v-for="location in locations" :key="location">{{ location }}</option>
+      </select>
+      <p>{{ eventData.location }}</p>
+```
+
 
 
 
